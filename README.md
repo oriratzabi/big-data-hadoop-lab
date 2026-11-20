@@ -22,7 +22,7 @@ Q1. Is your change in the mapper or in the reducer?
 In the mapper. Converting words to lowercase and stripping trailing commas and periods must happen before the shuffle and sort phase so that variations like "The", "the,", and "the." produce the exact same key ("the") and get grouped together for the reducer.
 
 Q2. Please provide your code on GitHub
-
+See [`exercise2_mapper.py`](./exercise2_mapper.py) in this repository.
 
 
 Exercise 3
@@ -30,10 +30,10 @@ Q1. Is your change in the mapper or in the reducer?
 n the reducer. Because Hadoop automatically groups all occurrences of each key together before sending them to the reducer, only the reducer knows the complete aggregated count for each word. Collecting the pairs inside reducer.py, sorting them in descending order by count, and emitting only the top 3 items performs the filtering and sorting directly inside the MapReduce job.
 
 Q2. Please provide your code on GitHub
-______________________________
+See [`exercise3_reducer.py`](./exercise3_reducer.py) in this repository.
 
-Q3. Print the output of the MapReduce and put in your GitHub as an image
-Note: you should not use external pipes, sort, or filters. All should be done inside the
-MapReduce Python code
+Q3.Print the output of the MapReduce and put in your GitHub as an image
+<img width="1690" height="355" alt="image" src="https://github.com/user-attachments/assets/65947eb6-f326-45d3-b5b4-eb3c996660c9" />
+
 I want to see in the screenshot after you type the command:
 $ > hadoop fs -ls /user/hduser/gutenberg-output
