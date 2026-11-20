@@ -27,6 +27,7 @@ Q2. Please provide your code on GitHub
 
 Exercise 3
 Q1. Is your change in the mapper or in the reducer?
+n the reducer. Because Hadoop automatically groups all occurrences of each key together before sending them to the reducer, only the reducer knows the complete aggregated count for each word. Collecting the pairs inside reducer.py, sorting them in descending order by count, and emitting only the top 3 items performs the filtering and sorting directly inside the MapReduce job.
 
 Q2. Please provide your code on GitHub
 ______________________________
